@@ -1,0 +1,34 @@
+# Secrets and local overrides
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Runtime output
+*.log
+logs/
+status/
+runtime/
+*.pid
+
+# Python and editor files
+__pycache__/
+*.py[cod]
+.venv/
+.idea/
+.vscode/
+.DS_Store
+
+# Homepage-generated/cache files
+config/logs/
+config/*.bak
+config/*.tmp
+
+# Local archives and backups
+*.tar
+*.tar.gz
+*.tgz
+backups/

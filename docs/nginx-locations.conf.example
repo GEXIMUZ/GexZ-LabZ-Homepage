@@ -1,0 +1,17 @@
+# Add these locations to the reverse proxy serving Homepage. Keep all collector
+# ports bound to 127.0.0.1; do not expose them directly to your LAN or internet.
+
+location /api/grafana/ {
+    proxy_pass http://127.0.0.1:9097/;
+    proxy_set_header Host $host;
+}
+
+location /api/media/ {
+    proxy_pass http://127.0.0.1:9098/;
+    proxy_set_header Host $host;
+}
+
+location = /api/telemetry {
+    proxy_pass http://127.0.0.1:9099/api/telemetry;
+    proxy_set_header Host $host;
+}

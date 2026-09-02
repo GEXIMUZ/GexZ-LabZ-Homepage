@@ -1,0 +1,35 @@
+theme: dark
+color: slate
+cardBlur: lg
+backgroundOpacity: 25
+useEqualHeights: true
+hideVersion: true
+target: _blank
+statusStyle: dot
+headerStyle: boxed
+bookmarksStyle: icons
+language: en
+providers:
+  openweathermap: "{{HOMEPAGE_VAR_OPENWEATHERMAP_API_KEY}}"
+iconStyle: theme
+layout:
+  Core Systems Bento:
+    icon: mdi-shield-crown
+    tab: Home
+    style: row
+    columns: 4
+  Infrastructure & Network:
+    icon: mdi-server-network
+    tab: Home
+    style: row
+    columns: 4
+  Active Media & Download Engine:
+    icon: mdi-play-network
+    tab: Home
+    style: row
+    columns: 4
+  Quick Launch:
+    icon: mdi-rocket-launch
+    tab: Home
+    style: row
+    columns: 6

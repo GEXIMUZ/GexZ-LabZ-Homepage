@@ -1,0 +1,25 @@
+- logo:
+    icon: /images/gexz-3d.png
+
+- search:
+    provider: google
+    focus: false
+    showSearchSuggestions: true
+    target: _parent
+
+- datetime:
+    locale: en
+    format:
+      dateStyle: medium
+      timeStyle: short
+
+- openweathermap:
+    label: Your location
+    latitude: "{{HOMEPAGE_VAR_WEATHER_LATITUDE}}"
+    longitude: "{{HOMEPAGE_VAR_WEATHER_LONGITUDE}}"
+    units: metric
+    provider: openweathermap
+    apiKey: "{{HOMEPAGE_VAR_OPENWEATHERMAP_API_KEY}}"
+    cache: 5
+    format:
+      maximumFractionDigits: 1

@@ -1,0 +1,20 @@
+[Unit]
+Description=GexZ Homepage media-status collector
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=homepage-telemetry
+Group=homepage-telemetry
+EnvironmentFile=/etc/gexz-labz-homepage.env
+ExecStart=/usr/bin/python3 /opt/gexz-labz-homepage/scripts/media_collector.py
+Restart=on-failure
+RestartSec=5s
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+
+[Install]
+WantedBy=multi-user.target

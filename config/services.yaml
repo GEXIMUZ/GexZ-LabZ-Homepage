@@ -1,0 +1,177 @@
+- Core Systems Bento:
+    - Home Assistant:
+        id: home-assistant
+        href: "{{HOMEPAGE_VAR_HOME_ASSISTANT_PUBLIC_URL}}"
+        icon: home-assistant
+        description: Smart-home automation platform
+        ping: "{{HOMEPAGE_VAR_HOME_ASSISTANT_URL}}"
+        widget:
+          type: homeassistant
+          url: "{{HOMEPAGE_VAR_HOME_ASSISTANT_URL}}"
+          key: "{{HOMEPAGE_VAR_HOME_ASSISTANT_TOKEN}}"
+          custom:
+            - state: sensor.living_room_temperature
+              label: Inside temperature
+            - state: switch.example_device
+              label: Example device
+    - Authentik:
+        id: authentik
+        href: "{{HOMEPAGE_VAR_AUTHENTIK_PUBLIC_URL}}"
+        icon: authentik.png
+        description: Identity provider and SSO manager
+        ping: "{{HOMEPAGE_VAR_AUTHENTIK_URL}}"
+        widget:
+          type: authentik
+          url: "{{HOMEPAGE_VAR_AUTHENTIK_URL}}"
+          key: "{{HOMEPAGE_VAR_AUTHENTIK_API_KEY}}"
+          version: 2
+    - Proxmox VE:
+        id: proxmox
+        href: "{{HOMEPAGE_VAR_PROXMOX_PUBLIC_URL}}"
+        icon: proxmox.png
+        description: Hypervisor and container manager
+        ping: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+        widget:
+          type: proxmox
+          url: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+          node: "{{HOMEPAGE_VAR_PROXMOX_NODE}}"
+          username: "{{HOMEPAGE_VAR_PROXMOX_TOKEN_ID}}"
+          password: "{{HOMEPAGE_VAR_PROXMOX_TOKEN_SECRET}}"
+    - Uptime Kuma:
+        id: uptime-kuma
+        href: "{{HOMEPAGE_VAR_UPTIME_KUMA_PUBLIC_URL}}"
+        icon: uptime-kuma
+        description: Availability monitoring and reporting
+        ping: "{{HOMEPAGE_VAR_UPTIME_KUMA_URL}}"
+        widget:
+          type: uptimekuma
+          url: "{{HOMEPAGE_VAR_UPTIME_KUMA_URL}}"
+          slug: "{{HOMEPAGE_VAR_UPTIME_KUMA_SLUG}}"
+
+- Infrastructure & Network:
+    - Cloudflare Tunnel:
+        id: cloudflared
+        href: https://one.dash.cloudflare.com
+        icon: cloudflared.png
+        description: Zero Trust edge-tunnel routing
+        widget:
+          type: cloudflared
+          accountid: "{{HOMEPAGE_VAR_CLOUDFLARE_ACCOUNT_ID}}"
+          tunnelid: "{{HOMEPAGE_VAR_CLOUDFLARE_TUNNEL_ID}}"
+          key: "{{HOMEPAGE_VAR_CLOUDFLARE_API_TOKEN}}"
+    - AdGuard Home:
+        id: adguard-home
+        href: "{{HOMEPAGE_VAR_ADGUARD_PUBLIC_URL}}"
+        icon: adguard-home.png
+        description: DNS filtering and privacy protection
+        ping: "{{HOMEPAGE_VAR_ADGUARD_URL}}"
+        widget:
+          type: adguard
+          url: "{{HOMEPAGE_VAR_ADGUARD_URL}}"
+          username: "{{HOMEPAGE_VAR_ADGUARD_USERNAME}}"
+          password: "{{HOMEPAGE_VAR_ADGUARD_PASSWORD}}"
+    - Dockge Containers:
+        id: dockge-containers
+        href: "{{HOMEPAGE_VAR_DOCKGE_PUBLIC_URL}}"
+        icon: dockge.svg
+        description: Docker stack and container manager
+        ping: "{{HOMEPAGE_VAR_DOCKGE_URL}}"
+        widget:
+          type: customapi
+          url: http://127.0.0.1:9097/docker
+          refreshInterval: 15000
+          mappings:
+            - field: total
+              label: Total
+              format: number
+            - field: running
+              label: Running
+              format: number
+    - NPMPlus Admin:
+        id: nginx-proxy-manager
+        href: "{{HOMEPAGE_VAR_NPMPLUS_PUBLIC_URL}}"
+        icon: nginx-proxy-manager.png
+        description: Reverse-proxy and OIDC portal
+        ping: "{{HOMEPAGE_VAR_NPMPLUS_URL}}"
+        widget:
+          type: customapi
+          url: http://127.0.0.1:9097/npmplus
+          refreshInterval: 30000
+          mappings:
+            - field: endpoint
+              label: Endpoint
+              format: text
+            - field: api
+              label: API
+              format: text
+            - field: role
+              label: Role
+              format: text
+
+- Active Media & Download Engine:
+    - Jellyfin:
+        id: jellyfin
+        href: "{{HOMEPAGE_VAR_JELLYFIN_PUBLIC_URL}}"
+        icon: jellyfin
+        description: Primary media-streaming library
+        ping: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
+        widget:
+          type: jellyfin
+          url: "{{HOMEPAGE_VAR_JELLYFIN_URL}}"
+          key: "{{HOMEPAGE_VAR_JELLYFIN_API_KEY}}"
+          enableBlocks: true
+          enableNowPlaying: false
+          enableUser: true
+    - Seerr:
+        id: seerr
+        href: "{{HOMEPAGE_VAR_SEERR_PUBLIC_URL}}"
+        icon: jellyseerr.png
+        description: Media-request and discovery portal
+        ping: "{{HOMEPAGE_VAR_SEERR_URL}}"
+        widget:
+          type: jellyseerr
+          url: "{{HOMEPAGE_VAR_SEERR_URL}}"
+          key: "{{HOMEPAGE_VAR_SEERR_API_KEY}}"
+    - qBittorrent:
+        id: qbittorrent
+        href: "{{HOMEPAGE_VAR_QBITTORRENT_PUBLIC_URL}}"
+        icon: qbittorrent
+        description: Torrent download client
+        ping: "{{HOMEPAGE_VAR_QBITTORRENT_URL}}"
+        widget:
+          type: qbittorrent
+          url: "{{HOMEPAGE_VAR_QBITTORRENT_URL}}"
+          username: "{{HOMEPAGE_VAR_QBITTORRENT_USERNAME}}"
+          password: "{{HOMEPAGE_VAR_QBITTORRENT_PASSWORD}}"
+          enableLeechProgress: true
+          enableLeechSize: true
+    - SABnzbd:
+        id: sabnzbd
+        href: "{{HOMEPAGE_VAR_SABNZBD_PUBLIC_URL}}"
+        icon: sabnzbd
+        description: Usenet binary downloader
+        ping: "{{HOMEPAGE_VAR_SABNZBD_URL}}"
+        widget:
+          type: sabnzbd
+          url: "{{HOMEPAGE_VAR_SABNZBD_URL}}"
+          key: "{{HOMEPAGE_VAR_SABNZBD_API_KEY}}"
+
+- Quick Launch:
+    - Bazarr:
+        href: "{{HOMEPAGE_VAR_BAZARR_PUBLIC_URL}}"
+        icon: bazarr.png
+    - Grafana:
+        href: "{{HOMEPAGE_VAR_GRAFANA_PUBLIC_URL}}"
+        icon: grafana.png
+    - Prowlarr:
+        href: "{{HOMEPAGE_VAR_PROWLARR_PUBLIC_URL}}"
+        icon: prowlarr
+    - Radarr:
+        href: "{{HOMEPAGE_VAR_RADARR_PUBLIC_URL}}"
+        icon: radarr
+    - Sonarr:
+        href: "{{HOMEPAGE_VAR_SONARR_PUBLIC_URL}}"
+        icon: sonarr
+    - Frigate NVR:
+        href: "{{HOMEPAGE_VAR_FRIGATE_PUBLIC_URL}}"
+        icon: frigate.png

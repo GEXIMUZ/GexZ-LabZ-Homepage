@@ -1,0 +1,20 @@
+[Unit]
+Description=GexZ Homepage health-status collector
+Wants=network-online.target gexz-grafana-bridge.service
+After=network-online.target gexz-grafana-bridge.service
+
+[Service]
+Type=simple
+User=homepage-telemetry
+Group=homepage-telemetry
+EnvironmentFile=/etc/gexz-labz-homepage.env
+ExecStart=/usr/bin/python3 /opt/gexz-labz-homepage/scripts/telemetry_collector.py
+Restart=on-failure
+RestartSec=5s
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+
+[Install]
+WantedBy=multi-user.target
