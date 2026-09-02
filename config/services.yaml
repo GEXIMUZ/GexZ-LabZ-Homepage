@@ -187,6 +187,9 @@
     - Grafana:
         href: "{{HOMEPAGE_VAR_GRAFANA_PUBLIC_URL}}"
         icon: grafana.png
+    - Hermes:
+        href: "{{HOMEPAGE_VAR_HERMES_PUBLIC_URL}}"
+        icon: mdi-robot
     - Home Assistant:
         href: "{{HOMEPAGE_VAR_HOME_ASSISTANT_PUBLIC_URL}}"
         icon: home-assistant
@@ -208,6 +211,9 @@
     - Prowlarr:
         href: "{{HOMEPAGE_VAR_PROWLARR_PUBLIC_URL}}"
         icon: prowlarr
+    - Prometheus:
+        href: "{{HOMEPAGE_VAR_PROMETHEUS_PUBLIC_URL}}"
+        icon: prometheus.png
     - Proxmox VE:
         href: "{{HOMEPAGE_VAR_PROXMOX_PUBLIC_URL}}"
         icon: proxmox.png

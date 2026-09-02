@@ -5,7 +5,7 @@ A heavily customized [Homepage](https://gethomepage.dev/) dashboard for a self-h
 > This repository is a sanitized public reference. It contains no production credentials, addresses, hostnames, device identifiers, logs, backups, or live screenshots.
 
 <p align="center">
-  <img src="screenshots/dashboard-preview.svg" alt="Sanitized GexZ LabZ Homepage preview" width="1100">
+  <img src="screenshots/Home.png" alt="Sanitized GexZ LabZ Homepage preview" width="1100">
 </p>
 
 ## What is included
