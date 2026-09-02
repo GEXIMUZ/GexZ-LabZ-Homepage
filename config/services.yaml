@@ -157,21 +157,87 @@
           key: "{{HOMEPAGE_VAR_SABNZBD_API_KEY}}"
 
 - Quick Launch:
+    - AdGuard Home:
+        href: "{{HOMEPAGE_VAR_ADGUARD_PUBLIC_URL}}"
+        icon: adguard-home.png
+    - Authentik:
+        href: "{{HOMEPAGE_VAR_AUTHENTIK_PUBLIC_URL}}"
+        icon: authentik.png
     - Bazarr:
         href: "{{HOMEPAGE_VAR_BAZARR_PUBLIC_URL}}"
         icon: bazarr.png
-    - Grafana:
-        href: "{{HOMEPAGE_VAR_GRAFANA_PUBLIC_URL}}"
-        icon: grafana.png
-    - Prowlarr:
-        href: "{{HOMEPAGE_VAR_PROWLARR_PUBLIC_URL}}"
-        icon: prowlarr
-    - Radarr:
-        href: "{{HOMEPAGE_VAR_RADARR_PUBLIC_URL}}"
-        icon: radarr
-    - Sonarr:
-        href: "{{HOMEPAGE_VAR_SONARR_PUBLIC_URL}}"
-        icon: sonarr
+    - Cloudflare:
+        href: https://one.dash.cloudflare.com
+        icon: cloudflared.png
+    - CrowdSec:
+        href: https://app.crowdsec.net/security-engines
+        icon: crowdsec.png
+    - DeGoog Search:
+        href: "{{HOMEPAGE_VAR_SEARCH_PUBLIC_URL}}"
+        icon: searxng.png
+    - Dispatcharr:
+        href: "{{HOMEPAGE_VAR_DISPATCHARR_PUBLIC_URL}}"
+        icon: dispatcharr.png
+    - Dockge:
+        href: "{{HOMEPAGE_VAR_DOCKGE_PUBLIC_URL}}"
+        icon: dockge.svg
     - Frigate NVR:
         href: "{{HOMEPAGE_VAR_FRIGATE_PUBLIC_URL}}"
         icon: frigate.png
+    - Grafana:
+        href: "{{HOMEPAGE_VAR_GRAFANA_PUBLIC_URL}}"
+        icon: grafana.png
+    - Home Assistant:
+        href: "{{HOMEPAGE_VAR_HOME_ASSISTANT_PUBLIC_URL}}"
+        icon: home-assistant
+    - Jellyfin:
+        href: "{{HOMEPAGE_VAR_JELLYFIN_PUBLIC_URL}}"
+        icon: jellyfin
+    - Jellystat:
+        href: "{{HOMEPAGE_VAR_JELLYSTAT_PUBLIC_URL}}"
+        icon: jellystat.png
+    - MySpeed:
+        href: "{{HOMEPAGE_VAR_MYSPEED_PUBLIC_URL}}"
+        icon: myspeed.png
+    - Netdata:
+        href: "{{HOMEPAGE_VAR_NETDATA_PUBLIC_URL}}"
+        icon: netdata.png
+    - NPMPlus:
+        href: "{{HOMEPAGE_VAR_NPMPLUS_PUBLIC_URL}}"
+        icon: nginx-proxy-manager.png
+    - Prowlarr:
+        href: "{{HOMEPAGE_VAR_PROWLARR_PUBLIC_URL}}"
+        icon: prowlarr
+    - Proxmox VE:
+        href: "{{HOMEPAGE_VAR_PROXMOX_PUBLIC_URL}}"
+        icon: proxmox.png
+    - Pterodactyl:
+        href: "{{HOMEPAGE_VAR_PTERODACTYL_PUBLIC_URL}}"
+        icon: pterodactyl
+    - qBittorrent:
+        href: "{{HOMEPAGE_VAR_QBITTORRENT_PUBLIC_URL}}"
+        icon: qbittorrent
+    - Radarr:
+        href: "{{HOMEPAGE_VAR_RADARR_PUBLIC_URL}}"
+        icon: radarr
+    - ROMs Vault:
+        href: "{{HOMEPAGE_VAR_ROMS_PUBLIC_URL}}"
+        icon: emulatorjs.png
+    - SABnzbd:
+        href: "{{HOMEPAGE_VAR_SABNZBD_PUBLIC_URL}}"
+        icon: sabnzbd
+    - Scrutiny:
+        href: "{{HOMEPAGE_VAR_SCRUTINY_PUBLIC_URL}}"
+        icon: scrutiny.png
+    - Seerr:
+        href: "{{HOMEPAGE_VAR_SEERR_PUBLIC_URL}}"
+        icon: jellyseerr.png
+    - Sonarr:
+        href: "{{HOMEPAGE_VAR_SONARR_PUBLIC_URL}}"
+        icon: sonarr
+    - Uptime Kuma:
+        href: "{{HOMEPAGE_VAR_UPTIME_KUMA_PUBLIC_URL}}"
+        icon: uptime-kuma
+    - W33Z:
+        href: "{{HOMEPAGE_VAR_W33Z_PUBLIC_URL}}"
+        icon: mdi-web

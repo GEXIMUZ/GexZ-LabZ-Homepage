@@ -14,7 +14,7 @@ The repository uses two variable styles:
 | Core | `HOME_ASSISTANT_*`, `AUTHENTIK_*`, `PROXMOX_*`, `UPTIME_KUMA_*` |
 | Infrastructure | `CLOUDFLARE_*`, `ADGUARD_*`, `DOCKGE_*`, `NPMPLUS_*` |
 | Media | `JELLYFIN_*`, `SEERR_*`, `QBITTORRENT_*`, `SABNZBD_*` |
-| Quick launch | public URL variables for Bazarr, Grafana, Prowlarr, Radarr, Sonarr, and Frigate |
+| Quick launch | public URL variables for all dashboard services, plus safe fixed links to the Cloudflare and CrowdSec portals |
 
 All example domains end in `.example`; replace them with your own internal DNS names or addresses in the private environment file.
 
